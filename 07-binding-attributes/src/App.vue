@@ -1,27 +1,25 @@
 <template>
   <h1 v-bind:id="headingId">Hello</h1>
-  <p> {{ greet}} {{ name }}</p>
+  <p>{{ greet }} {{ name }}</p>
   <p v-text="job"></p>
   <p v-html="domain"></p>
-  <button v-bind:disabled="isDisabled">Click</button>
+  <button v-bind:disabled="true">Click</button>
 </template>
 
 <script>
-
 export default {
   name: 'App',
-  components: {
-  },
+  components: {},
   data() {
     return {
-      greet: "Hello",
-      name: "Daniel",
-      job:" engineer",
-      domain:"<b>Solar energie</b>",
-      headingId: "heading",
+      greet: 'Hello',
+      name: 'Daniel',
+      job: ' engineer',
+      domain: '<b>Solar energie</b>',
+      headingId: 'heading',
       isDisabled: true,
     }
-  }
+  },
 }
 </script>
 
@@ -33,5 +31,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+#heading {
+  color: green;
 }
 </style>

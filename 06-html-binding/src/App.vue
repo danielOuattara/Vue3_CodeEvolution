@@ -1,24 +1,22 @@
 <template>
-  <p> {{ greet}} {{ name }}</p>
+  <p>{{ greet }} {{ name }}</p>
   <p v-text="job"></p>
   <p v-html="domain"></p>
 </template>
 
 <script>
-
 export default {
   name: 'App',
-  components: {
-  },
+  components: {},
   data() {
     return {
-      greet: "Hello",
-      name: "Daniel",
-      job:" engineer",
-      domain:"<b>Solar energie</b>",
-      headingId: "heading",
+      greet: 'Hello',
+      name: 'Daniel',
+      job: ' engineer',
+      domain: '<b>Solar energie</b>',
+      headingId: 'heading',
     }
-  }
+  },
 }
 </script>
 

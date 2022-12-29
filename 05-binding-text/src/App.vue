@@ -1,23 +1,19 @@
 <template>
-  <p> {{ greet}} {{ name }}</p>
+  <p>{{ greet }} {{ name }}</p>
   <p v-text="job"></p>
-
-
 </template>
 
 <script>
-
 export default {
   name: 'App',
-  components: {
-  },
+  components: {},
   data() {
     return {
-      greet: "Hello",
-      name: "Daniel",
-      job:"engineer",
+      greet: 'Hello',
+      name: 'Daniel',
+      job: 'engineer',
     }
-  }
+  },
 }
 </script>
 
