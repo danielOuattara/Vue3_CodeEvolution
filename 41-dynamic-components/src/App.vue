@@ -11,16 +11,16 @@
    -->
   <!-- ---------------------------------------------------- -->
   <p>
-    <button @click="active = 'tabA'">Tab A</button>
-    <button @click="active = 'tabB'">Tab B</button>
-    <button @click="active = 'tabC'">Tab C</button>
+    <button @click="active = 'TabA'">Tab A</button>
+    <button @click="active = 'TabB'">Tab B</button>
+    <button @click="active = 'TabC'">Tab C</button>
   </p>
 
   <component :is="active"></component>
 
   <!-- ---------------------------------------------------- -->
 
-  <!-- TODO:  complete by avoiding button repetitions -->
+  <!-- TODO: complete by avoiding button repetitions -->
   <!-- <p>
     
     <button
@@ -48,15 +48,15 @@ export default {
 
   data() {
     return {
-      active: "tabA",
-      buttonList: ["tabA", "tabB", "tabC"],
+      active: "TabA",
+      // buttonList: ["tabA", "tabB", "tabC"],
     };
   },
 
   methods: {
-    activator(arg) {
-      this.active = arg;
-    },
+    // activator(arg) {
+    //   this.active = arg;
+    // },
   },
 };
 </script>
@@ -68,8 +68,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-h4 {
-  color: orange;
 }
 </style>
