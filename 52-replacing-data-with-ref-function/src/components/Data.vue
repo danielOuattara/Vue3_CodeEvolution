@@ -14,6 +14,7 @@ export default {
 
     c_firstName.value = "Julie";
     const greetings = `Hello ${c_firstName.value}`;
+
     return { c_firstName, greetings };
   },
   data() {
