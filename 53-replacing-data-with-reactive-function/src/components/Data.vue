@@ -1,7 +1,9 @@
 <template>
   <h2>Options API - {{ o_firstName }} {{ o_lastName }} is {{ o_heroName }}</h2>
-  <h2>Options API - {{ heroPerson }}</h2>
-  <h2>Options API - {{ sameHeroPerson }}</h2>
+  <h2>Composotion API - {{ greetings }}</h2>
+  <h2>Composotion API - {{ heroPerson }}</h2>
+  <h2>Composotion API - {{ sameHeroPerson }}</h2>
+  <h2>Composition API - {{ colorsList }}</h2>
 </template>
 
 <script>
@@ -29,9 +31,12 @@ export default {
       heroName: "Batman",
     });
     const sameHeroPerson = `${state.firstName} ${state.lastName} ${state.heroName}`;
+
+    const colors = reactive(["red", "blue", "green"]);
+    const colorsList = `${colors[0]}, ${colors[1]}, ${colors[2]}`;
     //----------------------------------------------------
 
-    return { c_middleName, greetings, heroPerson, sameHeroPerson };
+    return { c_middleName, greetings, heroPerson, sameHeroPerson, colorsList };
   },
   data() {
     return {
