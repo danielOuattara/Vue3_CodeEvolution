@@ -2,14 +2,15 @@
   <div>
     <h2>Person Greeting component</h2>
     <p>basic props : {{ firstName }} {{ lastName }}</p>
-    <p>computed Options API : {{ fullName_option }}</p>
-    <p>computed Composition API : {{ fullName_composition }}</p>
+    <p>computed Options API : {{ o_fullName }}</p>
+    <p>computed Composition API : {{ c_fullName }}</p>
     <hr />
     <br />
 
     <button @click="o_sendEvent">
       options_api send info back to parent component
     </button>
+    <!-- -------------------- -->
     <button @click="c_sendEvent">
       composition_api send info back to parent component
     </button>
@@ -21,9 +22,11 @@ import { computed } from "vue";
 export default {
   name: "PersonGreeting",
   props: ["firstName", "lastName"],
+  emits: ["childToParent_options_api", "childToParent_composition_api"],
 
+  //-------------------------------------------------- compositon-api
   setup(props, context) {
-    const fullName_composition = computed(() => {
+    const c_fullName = computed(() => {
       return `${props.firstName} ${props.lastName}`;
     });
 
@@ -31,16 +34,16 @@ export default {
       context.emit("childToParent_composition_api", { name: "Jana Doe" });
     }
 
-    return { fullName_composition, c_sendEvent };
+    return { c_fullName, c_sendEvent };
   },
 
+  //--------------------------------------------------- options-api
   computed: {
-    fullName_option() {
+    o_fullName() {
       return `${this.firstName} ${this.lastName}`;
     },
   },
 
-  emits: ["childToParent_options_api", "childToParent_composition_api"],
   methods: {
     o_sendEvent() {
       this.$emit("childToParent_options_api", { message: "John Doe" });

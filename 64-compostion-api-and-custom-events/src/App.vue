@@ -1,4 +1,6 @@
-<template> <Person /></template>
+<template>
+  <Person />
+</template>
 
 <script>
 import Person from "./components/Person.vue";

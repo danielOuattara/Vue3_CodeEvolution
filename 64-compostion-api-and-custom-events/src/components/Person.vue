@@ -23,6 +23,8 @@ export default {
   components: {
     PersonGreeting,
   },
+
+  //---------------------------------------------------------- composition-api
   setup() {
     const firstName = ref("");
     const lastName = ref("");
@@ -35,6 +37,7 @@ export default {
     return { lastName, firstName, c_childMessage, c_showChildMessage };
   },
 
+  //---------------------------------------------------------- ooptions-api
   data() {
     return {
       o_childMessage: "",
