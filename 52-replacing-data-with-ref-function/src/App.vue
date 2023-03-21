@@ -1,4 +1,4 @@
-<template><Data /> </template>
+<template><Data></Data> </template>
 
 <script>
 import Data from "./components/Data.vue";

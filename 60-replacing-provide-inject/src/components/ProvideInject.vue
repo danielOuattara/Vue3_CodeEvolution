@@ -8,8 +8,9 @@
   </p>
   <p>Hero name: {{ `${firstName} ${lastName}` }}</p>
   <p>
-    <ChildA /></p
-></template>
+    <ChildA />
+  </p>
+</template>
 
 <script>
 import ChildA from "./ChildA.vue";
@@ -38,6 +39,8 @@ export default {
 
     return { c_count, c_increaseCount, ...toRefs(state) };
   },
+
+  //--------------------
 
   data() {
     return {

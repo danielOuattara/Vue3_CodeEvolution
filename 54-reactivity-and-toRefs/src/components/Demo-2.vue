@@ -1,5 +1,5 @@
 <template>
-  <!-- demo reacativity here -->
+  <!-- demo reactivity here -->
   <h2>
     {{ `${userThree.firstName} ${userThree.lastName} ${userThree.heroName}` }}
   </h2>
@@ -19,9 +19,10 @@ export default {
       lastName: "Wayne",
       heroName: "Batman",
     });
+
     setTimeout(() => {
       userThree.firstName = "Mathias";
-      userThree.lastName = "Bauers";
+      userThree.lastName = "Bauer";
     }, 2000);
 
     const userFour = reactive({

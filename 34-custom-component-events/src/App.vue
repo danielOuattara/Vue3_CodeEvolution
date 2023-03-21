@@ -32,6 +32,7 @@ export default {
     toggleShowPopup() {
       this.showPopup = !this.showPopup;
     },
+
     closePopup(arg) {
       this.showPopup = false;
       console.log("arg = ", arg);

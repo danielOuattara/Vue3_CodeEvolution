@@ -1,8 +1,8 @@
 <template>
   <h2>Options API - {{ o_firstName }} {{ o_lastName }} is {{ o_heroName }}</h2>
-  <h2>Composotion API - {{ greetings }}</h2>
-  <h2>Composotion API - {{ heroPerson }}</h2>
-  <h2>Composotion API - {{ sameHeroPerson }}</h2>
+  <h2>Composition API - {{ greetings }}</h2>
+  <h2>Composition API - {{ heroPerson }}</h2>
+  <h2>Composition API - {{ sameHeroPerson }}</h2>
   <h2>Composition API - {{ colorsList }}</h2>
 </template>
 

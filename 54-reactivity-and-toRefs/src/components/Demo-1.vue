@@ -1,5 +1,5 @@
 <template>
-  <!-- demo reacativity here -->
+  <!-- demo reactivity here -->
   <h2>{{ userOne }}</h2>
   <h2>{{ userTwo }}</h2>
 </template>
@@ -9,7 +9,7 @@ import { ref } from "vue";
 export default {
   name: "Demo-1",
   setup() {
-    //-------------------------
+    //------------------------- No Reactivity
     let userOne = "Daniel";
     console.log(userOne);
     setTimeout(() => {
@@ -17,7 +17,7 @@ export default {
       console.log(userOne);
     }, 1000);
 
-    //-------------------------
+    //------------------------- Reactivity Using Ref
     let userTwo = ref("Julie");
     console.log(userTwo.value);
     setTimeout(() => {

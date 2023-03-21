@@ -20,6 +20,7 @@ export default {
   // provide: {
   //   name: "Daniel",
   // },
+  
   provide() {
     return {
       name: this.username,
